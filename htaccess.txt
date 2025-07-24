@@ -1,0 +1,18 @@
+#Your other .htaccess settings are here...
+
+
+#Image
+RewriteRule ^private/chat/image/(.*)$ get_file.php?type=image&file=$1 [L]
+
+#Video
+RewriteRule ^private/chat/video/(.*)$ get_file.php?type=video&file=$1 [L]
+
+#Dosya
+RewriteRule ^private/chat/file/(.*)$ get_file.php?type=file&file=$1 [L]
+
+#Links in here is not file paths. They are links that we create
+#You can customize that links as you want
+#That links are going to get_file.php
+#get_file.php?type= this part defined static
+#That type shows which sub folder that you are in
+#You can check or set it on get_file.php
